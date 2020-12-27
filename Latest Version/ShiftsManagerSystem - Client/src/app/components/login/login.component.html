@@ -1,0 +1,28 @@
+<h2>Login details, please...</h2>
+
+<form #formInfo="ngForm">
+
+    
+
+    <mat-form-field>
+        <input matInput type="text" placeholder="Username" name="username" [(ngModel)]="credentials.username" required
+            #usernameInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="usernameInfo.errors?.required && usernameInfo.touched">Missing username</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="credentials.password" required
+            #passwordInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="passwordInfo.errors?.required && passwordInfo.touched">Missing password</span>
+    <br>
+
+    
+
+
+    <button mat-button [disabled]="formInfo.form.invalid" (click)="login()">Enter</button>
+    <br><br><br>
+    <a routerLink="/admin/add-business">New registration to the system</a>
+
+</form>

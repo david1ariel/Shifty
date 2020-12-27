@@ -1,0 +1,40 @@
+/* mat-menu {
+    margin: 0px;
+    margin-left: 90%;
+} */
+
+.active{
+    color: black;
+}
+
+a{
+    font-family: Oswald;
+    font-size: large;
+    color: white;
+}
+
+span{
+    font-family: Oswald;
+    font-size: large;
+    color: white;
+}
+
+hr{
+    text-align: left;
+    color: white;
+    width: 85%;
+    right: 2px;
+}
+
+.activeA{
+    color: black;
+}
+
+div{
+    background-color: #1CD8D8;
+    padding-top: 20px;
+    padding-left: 20px;
+    height: 100%;
+    text-align: left;
+    padding-bottom: 15px;
+}

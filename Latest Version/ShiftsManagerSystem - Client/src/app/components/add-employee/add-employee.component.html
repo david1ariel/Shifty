@@ -1,0 +1,108 @@
+<h2>
+    Add New Employee
+</h2>
+<form #formInfo="ngForm">
+
+    <mat-form-field>
+        <input matInput type="text" placeholder="First Name" name="firstName" [(ngModel)]="employee.firstName" required
+            #firstNameInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="firstNameInfo.errors?.required && firstNameInfo.touched">Missing first name</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="text" placeholder="Last Name" name="lastName" [(ngModel)]="employee.lastName" required
+            #lastNameInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="lastNameInfo.errors?.required && lastNameInfo.touched">Missing last name</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="text" placeholder="Title" name="title" [(ngModel)]="employee.title" 
+            #titleInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="titleInfo.errors?.required && titleInfo.touched">Missing title</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="date" placeholder="Birth Date" name="birthDate" [(ngModel)]="employee.birthDate" 
+             #birthDateInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="birthDateInfo.errors?.required && birthDateInfo.touched">Missing birth date</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="date" placeholder="Hire Date" name="hireDate" [(ngModel)]="employee.hireDate" 
+             #hireDateInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="hireDateInfo.errors?.required && hireDateInfo.touched">Missing hire date</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="text" placeholder="Adress" name="adress" [(ngModel)]="employee.adress" 
+            #adressInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="adressInfo.errors?.required && adressInfo.touched">Missing adress</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="text" placeholder="Psotal code" name="postalCode" [(ngModel)]="employee.postalCode"
+             #postalCodeInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="postalCodeInfo.errors?.required && postalCodeInfo.touched">Missing postal code</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="tel" placeholder="Phone 1" name="phone1" [(ngModel)]="employee.phone1" 
+            #phone1Info="ngModel">
+    </mat-form-field>
+    <span *ngIf="phone1Info.errors?.required && phone1Info.touched">Missing phone</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="tel" placeholder="Phone 2" name="phone2" [(ngModel)]="employee.phone2"
+            #phone2Info="ngModel">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="text" placeholder="ID card" name="idCard" [(ngModel)]="employee.idCard" 
+            #idCardInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="idCardInfo.errors?.required && idCardInfo.touched">Missing id card</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="text" placeholder="Username" name="username" [(ngModel)]="employee.username" required
+            #usernameInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="usernameInfo.errors?.required && usernameInfo.touched">Missing username</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="employee.password" required
+            #passwordInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="passwordInfo.errors?.required && passwordInfo.touched">Missing password</span>
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Select an option</mat-label>
+        <mat-select [(ngModel)]="employee.role" name="role">
+          <mat-option>None</mat-option>
+          <mat-option value="user" (onSelectionChange)="changeEmployeeRole($event)">User</mat-option>
+          <mat-option value="manager" (onSelectionChange)="changeEmployeeRole($event)">Manager</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <br>
+    
+    
+
+    <br>
+
+
+    <button mat-button [disabled]="formInfo.form.invalid" (click)="register()">add</button>
+    <br>
+
+</form>
+<hr>

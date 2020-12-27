@@ -1,0 +1,24 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: x-large;
+    
+    font-family: Oswald;
+}
+
+@font-face {
+    src: url("assets/fonts/Oswald-VariableFont_wght.ttf");
+    font-family: Oswald;
+}
+
+@font-face {
+    src: url("assets/fonts/Ranchers-Regular.ttf");
+    font-family: Ranchers;
+}
+
+
+

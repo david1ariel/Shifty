@@ -1,0 +1,38 @@
+<h2>
+    Add New Shift
+</h2>
+<form #formInfo="ngForm">
+
+    <mat-form-field>
+        <input matInput type="number" placeholder="shiftTypeId" name="shiftTypeId" [(ngModel)]="shift.shiftTypeId" required
+            #shiftTypeIdInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="shiftTypeIdInfo.errors?.required && shiftTypeIdInfo.touched">Missing shiftTypeId</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="number" placeholder="employeeId" name="employeeId" [(ngModel)]="shift.employeeId" required
+            #employeeIdInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="employeeIdInfo.errors?.required && employeeIdInfo.touched">Missing shiftTypeId</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="time" placeholder="Started At:" name="starts" [(ngModel)]="shift.started" required
+            #startsInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="startsInfo.errors?.required && startsInfo.touched">Missing Starting Time</span>
+    <br>
+
+    <mat-form-field>
+        <input matInput type="time" placeholder="Ended At:" name="ends" [(ngModel)]="shift.ended" 
+            #endsInfo="ngModel">
+    </mat-form-field>
+    <span *ngIf="endsInfo.errors?.required && endsInfo.touched">Missing Ending Time</span>
+    <br>
+
+    <button mat-button [disabled]="formInfo.form.invalid" (click)="addShift()">add</button>
+    <br>
+
+</form>
+<hr>

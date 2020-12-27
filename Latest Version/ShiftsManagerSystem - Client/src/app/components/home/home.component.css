@@ -1,0 +1,36 @@
+
+.employeesNames{
+    text-align: center;
+    width: 200px;
+}
+
+app-dinamic-square{
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.home{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.aside{
+    grid-column: span 2;
+    background-color: darkslategrey;
+}
+
+main{
+    grid-column: span 8;
+}
+
+table{
+    color: black;
+}
+
+td{
+    border: 1px solid black;
+}

@@ -1,0 +1,46 @@
+
+
+<!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/home" routerLinkActive="active">Home</button>
+    <button mat-menu-item routerLink="/about" routerLinkActive="active">About</button>
+    <button *ngIf="employee?.role==='admin'" mat-menu-item routerLink="/admin/add-business"
+        routerLinkActive="active">Add New Business</button>
+    <button *ngIf="employee?.role==='admin'||employee?.role==='manager'" mat-menu-item routerLink="/employees"
+        routerLinkActive="active">Employees</button>
+    <button *ngIf="employee?.role==='admin'||employee?.role==='manager'" mat-menu-item routerLink="/employees/new"
+        routerLinkActive="active">Add Employee</button>
+    <button *ngIf="employee" mat-menu-item routerLink="/employees/edit/{{employee.employeeId}}"
+        routerLinkActive="active">Edit My Profile</button>
+    <button *ngIf="!employee" mat-menu-item routerLink="/login" routerLinkActive="active">LogIn</button>
+    <button *ngIf="employee" mat-menu-item routerLink="/logout" routerLinkActive="active">LogOut</button>
+</mat-menu> -->
+
+<div>
+    <span>{{greetings()}}</span>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <a routerLink="/home" routerLinkActive="activeA" *ngIf="employee?.role==='admin'||employee?.role==='manager'">Home Page</a>
+    <br *ngIf="employee?.role==='admin'||employee?.role==='manager'">
+    <br *ngIf="employee?.role==='admin'||employee?.role==='manager'">
+    <a routerLink="/employees" routerLinkActive="activeA" *ngIf="employee?.role==='admin'||employee?.role==='manager'">Manage Employees</a>
+    <br *ngIf="employee?.role==='admin'||employee?.role==='manager'">
+    <br *ngIf="employee?.role==='admin'||employee?.role==='manager'">
+    <a *ngIf="employee" routerLink="/submit-shifts" routerLinkActive="active">Submit Shifts</a>
+    <br *ngIf="employee">
+    <br *ngIf="employee">
+    <a routerLink="/edit-employee/{{employee.employeeId}}" routerLinkActive="activeA" *ngIf="employee">Profile</a>
+    <br *ngIf="employee">
+    <br *ngIf="employee">
+    <a *ngIf="!employee" routerLink="/login" routerLinkActive="active">LogIn</a>
+    <br *ngIf="!employee">
+    <br *ngIf="!employee">
+    <a *ngIf="employee" routerLink="/logout" routerLinkActive="active">LogOut</a>
+    <br>
+    <br>
+</div>

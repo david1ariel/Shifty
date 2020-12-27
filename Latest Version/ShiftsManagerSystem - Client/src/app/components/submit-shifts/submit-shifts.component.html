@@ -1,0 +1,36 @@
+<div ngClass="outer">
+    <div ngClass="table-container">
+        <table *ngIf="futureShiftsEmployeesById">
+            <tr>
+                <th ngClass="invisible"></th>
+                <th ngClass="noBorder">Sunday</th>
+                <th ngClass="noBorder">Monday</th>
+                <th ngClass="noBorder">Tuesday</th>
+                <th ngClass="noBorder">Wednesday</th>
+                <th ngClass="noBorder">Thursday</th>
+                <th ngClass="noBorder">Friday</th>
+                <th ngClass="noBorder">Saturday</th>
+            </tr>
+            <tr>
+                <th ngClass="noBorder">Morning Shifts</th>
+                <ng-container *ngFor="let item of isAvailable; index as i">
+                    <td *ngIf="i<=6" (click)="markShift(i)">
+                        {{converBooleanToMark(item)}}
+                    </td>
+                </ng-container>
+            </tr>
+            
+            <tr>
+                <th ngClass="noBorder">Evening Shifts</th>
+                <ng-container *ngFor="let item of isAvailable; index as i">
+                    <td *ngIf="i>6" (click)="markShift(i)">
+                        {{converBooleanToMark(item)}}
+                    </td>
+                </ng-container>
+            </tr>
+
+        </table>
+    </div>
+    <button mat-raised-button ngClass="submitButton" (click)="submitShifts()">Submit Shifts</button>
+    <button mat-raised-button ngClass="clearButton" (click)="clear()">Clear</button>
+</div>
